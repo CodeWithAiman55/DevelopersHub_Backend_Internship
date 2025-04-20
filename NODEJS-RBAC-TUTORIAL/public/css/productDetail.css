@@ -1,0 +1,1106 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --section-heading: #1C1C1C;
+  --base-color: #1C1C1C;
+  --base-color-grey-800: #606060;
+  --base-color-grey-400: #A9ACB0;
+  --base-color-grey-300: #BDC1C8;
+  --grey-500: #8B96A5;
+  --grey-600: #505050;
+  --grey-300: #DEE2E7;
+  --grey-200: #EFF2F4;
+  --footer-links: #8B96A5;
+  --grey1: #8B96A5;
+
+  --footer-text: #505050;
+  --footer-text: #505050;
+  --subscribe-text: #505050;
+  /* --subscribe-btn: #0067FF; */
+  --subscribe-btn: #127FFF;
+  --white: #ffffff;
+  --section-bg: #EFF2F4;
+  --price-text: #8B96A5;
+  --border-color: #E0E0E0;
+  --gray-100: #F7FAFC;
+  --clip-path-color1: #237CFF;
+  --clip-path-color2: #005ADE;
+  --banner-btn: #FF9017;
+  --primary: #0D6EFD;
+  --btn-text-color: #FA3434;
+  --table-border: #E0E7E9;
+  --product-icon-green: #00B517;
+  --icon-star: #D4CDC5;
+  --grey-circle: #DBDBDB;
+  --quantity-box-border: #BDC1C8;
+  --quantity-box: #FFF0DF;
+  --supp-box: #C6F3F1;
+  --supp-text: #4CA7A799;
+}
+
+body {
+  font-family: inter;
+  background-color: var(--gray-100);
+}
+
+/* wrapper */
+.wrapper {
+  max-width: 1310px;
+  min-width: 480px;
+  /* border: 2px solid black; */
+}
+
+section {
+  width: 90%;
+  margin: 0px auto;
+}
+
+/* Navigation Menu */
+
+header {
+  background-color: var(--white);
+  border: 2px solid green;
+  width: 100%;
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: center;
+  align-content: center;
+  width: 80%;
+  height: 86px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid red;
+}
+
+header nav .logo .homepage-redirect-link img {
+  height: 46px;
+  width: 150px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+header nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin: 5px;
+}
+
+header nav ul li a:hover {
+  background-color: var(--base-color);
+  color: var(--white);
+}
+
+
+header nav ul li a i {
+  font-size: 18px;
+  color: var(--grey-500);
+  margin-right: 8px;
+}
+
+header nav ul li a i,
+header nav ul li a span {
+  display: block;
+  width: 70px;
+  height: 19px;
+  color: var(--grey-500);
+
+}
+
+header nav ul li a span {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* Main Content Section */
+
+.mainContentBox {
+  border: 2px solid black;
+  width: 100%;
+}
+
+.mainContentBox .mainContent {
+  /* border: 2px solid black; */
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  background-color: var(--white);
+}
+
+.mainContentBox .mainContent .productMedia .productMediaImage {
+  width: 342px;
+  height: 380px;
+  border: 1px solid var(--grey-300);
+}
+
+.mainContentBox .mainContent .productMedia .productMediaImage img {
+  width: 340px;
+  height: 345px;
+  /* border: 1px solid var(--grey-300); */
+}
+
+.mainContentBox .mainContent .productMedia .productMediaViewer {
+  width: 343px;
+  height: 56px;
+  border: 1px solid var(--grey-300);
+  margin-top: 10px;
+}
+
+.mainContentBox .mainContent .productMedia .productMediaViewer img {
+  width: 53px;
+  height: 53px;
+  border: 1px solid var(--grey-300);
+}
+
+.mainContentBox .mainContent .productMediaDetail .productMediaIcon span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: var(--product-icon-green);
+}
+
+.mainContentBox .mainContent .productMediaDetail .productMediaText h4 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: var(--base-color);
+}
+
+
+.mainContentBox .mainContent .productMediaDetail .productMediaMeta {
+  margin: 10px 0;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productMediaMeta .ratingStar i {
+  color: var(--banner-btn);
+}
+
+.mainContentBox .mainContent .productMediaDetail .productMediaMeta .ratingStar i:last-child {
+  color: var(--icon-star);
+}
+
+.mainContentBox .mainContent .productMediaDetail .productMediaMeta .rating {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--banner-btn);
+}
+
+.circle {
+  color: var(--grey-circle);
+  font-size: 5px;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productMediaMeta .reviews {
+  color: var(--grey-500);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productMediaMeta .sold {
+  color: var(--grey-500);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productMediaMeta span {
+  margin: 0 2px;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productPricing {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 380px;
+  height: 72px;
+  border: 1px solid var(--quantity-box-border);
+  background-color: var(--quantity-box);
+  padding: 10px;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productPricing .priceLine {
+  border-left: 1px solid var(--base-color-grey-300);
+  padding: 10px 30px 10px 10px;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productPricing div:first-of-type {
+  border-left: none;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productPricing .priceLine h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--btn-text-color);
+}
+
+.mainContentBox .mainContent .productMediaDetail .productPricing .priceLine span {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--base-color-grey-800);
+}
+
+.mainContentBox .mainContent .productMediaDetail .productDescTable {
+  margin: 10px 0;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productDescTable table {
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productDescTable .table tr,
+.mainContentBox .mainContent .productMediaDetail .productDescTable .table td,
+.mainContentBox .mainContent .productMediaDetail .productDescTable .table th {
+  border: none;
+  background-color: var(--white);
+  color: var(--grey-500);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+.mainContentBox .mainContent .productMediaDetail .productDescTable .table td {
+  color: var(--grey-600);
+}
+
+.mainContentBox .mainContent .productMediaDetail .productDescTable .table tr:nth-child(1),
+.mainContentBox .mainContent .productMediaDetail .productDescTable .table tr:nth-child(4),
+.mainContentBox .mainContent .productMediaDetail .productDescTable .table tr:nth-child(7) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+.mainContentBox .mainContent .supplierDetails {
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
+  height: 270px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(222, 226, 231, 0.6);
+
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierName {
+  display: flex;
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierName .supplierLetter {
+  height: 48px;
+  width: 48px;
+  background-color: var(--supp-box);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierName .supplierLetter span {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  color: var(--supp-text);
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierName span {
+  font-size: 14px;
+  color: var(--base-color);
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  display: block;
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierDetail {
+  padding: 15px 0;
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierDetail .supplyMode {
+  margin-bottom: 20px;
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierDetail .supplierResidence span,
+.mainContentBox .mainContent .supplierDetails .supplierDetail .supplierStatus span,
+.mainContentBox .mainContent .supplierDetails .supplierDetail .supplyMode span {
+  font-size: 16px;
+  color: var(--base-color);
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: var(--grey-500);
+  margin-left: 4px;
+  pad: 5px;
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierDetail .supplierResidence img {
+  width: 20px;
+  height: 15px;
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierDetail .sendInqueryBtn button,
+.mainContentBox .mainContent .supplierDetails .supplierDetail .showSellerProfile {
+  width: 100%;
+  height: 19px;
+  background: linear-gradient(to right, #127FFF, #0067FF);
+  border: none;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierDetail .showSellerProfile {
+  background: linear-gradient(to right, #fff, #fff);
+  border: 1px solid var(--grey-300);
+}
+
+.mainContentBox .mainContent .supplierDetails .supplierDetail .showSellerProfile a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+
+/* Accordiian CSS */
+
+.accordianBox {
+  border: 2px solid;
+  width: 100%;
+  display: grid;
+  margin: 10px 0;
+}
+
+.accordianBox .articles-container {
+  width: 80%;
+  /* border: 2px solid; */
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+.accordianBox .articles-container .accordianGrid {
+  flex: 3;
+}
+
+.accordianBox .articles-container .accordianGrid .accordianTabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  border: 1px solid var(--grey-300);
+  background-color: var(--white);
+  padding: 3px;
+}
+
+.accordianBox .articles-container .accordianGrid .accordianTabs .accordianBtn {
+  padding: 10px 20px;
+  background-color: var(--white);
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  color: var(--grey-500);
+  font-weight: 500;
+}
+
+.accordianBox .articles-container .accordianGrid .accordianTabs .accordianBtn.active {
+  color: var(--primary);
+}
+
+.accordianBox .articles-container .accordianGrid .accordianContentBox {
+  /* border: 1px solid ; */
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 5px;
+  min-height: 150px;
+}
+
+.accordianBox .articles-container .accordianGrid .accordianContentBox .tab-content {
+  display: none;
+}
+
+.accordianBox .articles-container .accordianGrid .accordianContentBox .tab-content.active {
+  display: block;
+}
+
+.accordianBox .articles-container .accordianGrid .accordianContentBox .tab-content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: var(--grey-600);
+  text-align: justify;
+}
+
+
+.accordianBox .articles-container .accordianGrid .productSpecs {
+  background-color: var(--white);
+  padding: 5px 20px;
+}
+
+.accordianBox .articles-container .accordianGrid .productSpecs table {
+  width: 70%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--table-border);
+}
+
+th,
+td {
+  padding: 5px;
+  text-align: left;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+  background-color: var(--grey-200);
+  color: var(--grey-600);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+}
+
+.accordianBox .articles-container .accordianGrid .nameFeatures {
+  background-color: var(--white);
+}
+
+.accordianBox .articles-container .accordianGrid .nameFeatures ul {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.accordianBox .articles-container .accordianGrid .nameFeatures ul li,
+.accordianBox .articles-container .accordianGrid .nameFeatures ul li span {
+  color: var(--grey-600);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  margin-right: 7px;
+  padding: 5px 0;
+}
+
+.accordianBox .articles-container .sideBar {
+  margin: 15px 0;
+  flex: 1;
+  background: var(--white);
+  padding: 10px 10px;
+  border: 1px solid var(--grey-300);
+  height: 475px;
+}
+
+.accordianBox .articles-container .sideBar h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--base-color);
+  margin-bottom: 10px;
+}
+
+.accordianBox .articles-container .sideBar .sidebarProducts {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.accordianBox .articles-container .sideBar .sidebarProducts .sidebarImage {
+  width: 70px;
+  height: 70px;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.accordianBox .articles-container .sideBar .sidebarProducts .sidebarImage img {
+  object-fit: cover;
+  height: 59.42px;
+  width: 54.76px;
+}
+
+.accordianBox .articles-container .sideBar .sidebarProducts .sidebarText p,
+.accordianBox .articles-container .sideBar .sidebarProducts .sidebarText span {
+  color: var(--base-color);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  margin-left: 12px;
+  /* padding: 5px 0; */
+}
+
+.accordianBox .articles-container .sideBar .sidebarProducts .sidebarText span {
+  color: var(--grey-500);
+}
+
+
+
+/* Featured Products CSS  */
+
+.featuredBox {
+  width: 100%;
+  border: 2px solid;
+}
+
+
+.featuredBox .featuredProductsBox {
+  width: 80%;
+  border: 2px solid var(--grey-300);
+  background-color: var(--white);
+  margin: 30px auto;
+  padding: 0 30px 30px 30px;
+}
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductsBoxHeading {
+  padding: 20px;
+}
+
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductsBoxHeading h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  color: var(--base-color);
+}
+
+.featuredBox .featuredProductsBox .featuredProducts {
+  /* border: 2px solid black; */
+
+}
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductBox {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(160px, 160px)); */
+  /* grid-template-columns: repeat(6, 100px); */
+  gap: 10px;
+
+}
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductBox .featuredProduct {
+  /* display: grid;
+  grid-template-columns: 1fr ; */
+  border-radius: 15px;
+
+}
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductBox .featuredProduct .featuredProductImage {
+  /* width: 80%; */
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEEEE;
+}
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductBox .featuredProduct .featuredProductImage img {
+  width: 80%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductBox .featuredProduct .featuredProductPrice {
+  padding: 10px 0;
+}
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductBox .featuredProduct .featuredProductPrice span {
+  color: var(--grey-500);
+  font-size: 16px;
+  font-weight: 400px;
+
+}
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductBox .featuredProduct .featuredProductDesc {
+  padding: 0 60px 0 0;
+}
+
+.featuredBox .featuredProductsBox .featuredProducts .featuredProductBox .featuredProduct .featuredProductDesc p {
+  color: var(--base-color);
+  font-size: 14px;
+  font-weight: 600px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+
+
+/* discount */
+
+.discountBannerBox {
+  width: 100%;
+  /* height: 40vh; */
+  border: 2px solid;
+  /* margin-bottom: 100px; */
+}
+
+.discountBannerBox .discountBanner {
+  width: 80%;
+  margin: 5px auto;
+  padding: 15px 0px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr;
+  align-items: end;
+  justify-items: start;
+  position: relative;
+  border: 2px solid black;
+  background-color: var(--gray-100);
+  overflow: hidden;
+}
+
+.discountBannerBox .discountBanner .discountBannerLeft {
+  min-width: 655px;
+  height: 115px;
+  /* border: 2px solid; */
+  clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+  background-color: var(--clip-path-color1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.discountBannerBox .discountBanner .discountBannerRight {
+  min-width: 520px;
+  height: 115px;
+  background-color: var(--clip-path-color2);
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  z-index: 1;
+  clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 23% 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.discountBannerBox .discountBanner .discountBannerLeft .discountBannerText h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  color: var(--white);
+}
+
+.discountBannerBox .discountBanner .discountBannerLeft .discountBannerText p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.discountBannerBox .discountBanner .discountBannerRight .discountBannerBtn {
+  height: 40px;
+  width: 120px;
+  border-radius: 8px;
+  background-color: var(--banner-btn);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 64px;
+}
+
+.discountBannerBox .discountBanner .discountBannerRight .discountBannerBtn a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  /* margin-bottom: 10px; */
+
+}
+
+/* Footer CSS */
+footer {
+  width: 100%;
+  border: 2px solid;
+  /* padding: 30px 0 0 0; */
+  background-color: var(--white);
+}
+
+.footer {
+  width: 80%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: auto auto; */
+  align-items: center;
+  /* gap: 20px; */
+  justify-content: center;
+  padding: 40px 0px;
+  border: 2px solid;
+}
+
+.footer .footerMainBox .companyText p {
+  color: var(--footer-text);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer .footerMainBox .companySocialLinks ul {
+  display: flex;
+  /* justify-content: space-between; */
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footerMainBox .companySocialLinks ul li {
+  padding: 10px 12px 0 0;
+}
+
+.footer .footerMainBox .companySocialLinks ul li a img {
+  height: 30px;
+  width: 30px;
+}
+
+.footer h6 {
+  color: var(--section-heading);
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.footer ul li {
+  list-style: none;
+}
+
+.footer ul li a {
+  color: var(--footer-links);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+footer .footerCopyrightBox {
+  width: 100%;
+  padding: 30px 0;
+  /* border: 2px solid; */
+  background-color: var(--gray-100);
+  /* display: flex;
+  justify-content: center; */
+  grid-column: 1 / 2;
+}
+
+footer .footerCopyrightBox .footerCopyrightText {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* media queries */
+
+@media (max-width: 480px) {
+  .accordianBox .articles-container .accordianGrid .accordianTabs {
+    flex-direction: column;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarImage {
+    margin-bottom: 10px;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarText {
+    margin-left: 0;
+  }
+}
+
+
+@media (max-width:768px) {
+  .accordianBox .articles-container .accordianGrid .accordianTabs {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .accordianBox .articles-container .sideBar {
+    height: auto;
+    padding: 15px;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarImage {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarImage img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarText p,
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarText span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .accordianBox .articles-container .accordianGrid .accordianContentBox .tab-content p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .accordianBox .articles-container .accordianGrid .nameFeatures ul li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .discountBannerBox .discountBanner .discountBannerLeft .discountBannerText h3 {
+    font-size: 22px;
+  }
+
+  .discountBannerBox .discountBanner .discountBannerLeft .discountBannerText p {
+    font-size: 14px;
+
+  }
+
+}
+
+@media (max-width:650px) {
+
+  .discountBannerBox .discountBanner .discountBannerLeft .discountBannerText h3 {
+    font-size: 18px;
+  }
+
+  .discountBannerBox .discountBanner .discountBannerLeft .discountBannerText p {
+    font-size: 12px;
+
+  }
+
+
+}
+
+@media (max-width: 1024px) {
+  .accordianBox .articles-container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .accordianBox .articles-container .accordianGrid,
+  .accordianBox .articles-container .sideBar {
+    width: 100%;
+  }
+
+  .accordianBox .articles-container .accordianGrid .productSpecs table {
+    width: 100%;
+  }
+
+  .mainContentBox .mainContent {
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+  .accordianBox .articles-container .accordianGrid .accordianTabs {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .accordianBox .articles-container .sideBar {
+    height: auto;
+    padding: 15px;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarImage {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarImage img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarText p,
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarText span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .accordianBox .articles-container .accordianGrid .accordianContentBox .tab-content p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .accordianBox .articles-container .accordianGrid .nameFeatures ul li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordianBox .articles-container .accordianGrid .accordianTabs {
+    flex-direction: column;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarImage {
+    margin-bottom: 10px;
+  }
+
+  .accordianBox .articles-container .sideBar .sidebarProducts .sidebarText {
+    margin-left: 0;
+  }
+}
+
+
+@media (max-width: 1170px) {
+
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+
+  .discountBannerBox .discountBanner {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 50px;
+
+  }
+
+  .discountBannerBox .discountBanner .discountBannerRight {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 115px;
+    clip-path: none;
+    border-radius: 0;
+
+  }
+
+  .discountBannerBox .discountBanner .discountBannerLeft {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    clip-path: none;
+  }
+
+
+  .featuredBox .featuredProductsBox .featuredProducts .featuredProductBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featuredBox .featuredProductsBox .featuredProducts .featuredProductBox .featuredProduct .featuredProductImage img {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width:680px) {
+
+  .discountBannerBox .discountBanner .discountBannerRight .discountBannerBtn {
+
+    margin: 0 auto;
+
+
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .featuredBox .featuredProductsBox .featuredProducts .featuredProductBox {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featuredBox .featuredProductsBox .featuredProducts .featuredProductBox .featuredProduct .featuredProductImage img {
+    width: 50%;
+  }
+}
+
+@media (max-width:1220px) {
+  .mainContentBox .mainContent {
+    grid-template-columns: 2fr 1fr;
+
+  }
+
+  .mainContentBox .mainContent .supplierDetails {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width:950px) {
+  .mainContentBox .mainContent {
+    grid-template-columns: 1fr;
+
+  }
+
+  .mainContentBox .mainContent .supplierDetails {
+    grid-column: 1/-1;
+  }
+
+  .mainContentBox .mainContent .productMedia .productMediaImage img {
+    width: 340px;
+    height: 274px;
+  }
+  .mainContentBox .mainContent .productMedia .productMediaImage {
+    width: 342px;
+    height: 300px;
+  }
+}

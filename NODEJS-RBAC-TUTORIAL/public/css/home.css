@@ -1,0 +1,630 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --section-heading: #1C1C1C; 
+  --base-color: #1C1C1C; 
+  --base-color-grey-800: #606060; 
+  --grey-500: #8B96A5;
+  --footer-links: #8B96A5;
+  --grey1: #8B96A5;
+
+  --footer-text: #505050;
+  --footer-text: #505050;
+  --subscribe-text: #505050;
+  /* --subscribe-btn: #0067FF; */
+  --subscribe-btn: #127FFF;
+  --white: #ffffff;
+  --section-bg: #EFF2F4;
+  --price-text: #8B96A5;
+  --border-color: #E0E0E0;
+}
+
+body {
+  font-family: inter;
+}
+
+/* wrapper */
+.wrapper{
+  max-width: 1300px;
+  min-width: 420px;
+  border: 2px solid black;
+}
+
+section{
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Navigation Menu */
+
+header{
+
+background-color: var(--white);
+}
+header .container nav{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 330px));
+  /* grid-template-rows: repeat(2, 300px); */
+  padding: 40px 50px 40px 120px;
+  border: 2px solid;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+header .container nav .logo a img {
+
+}
+
+header .container nav .searchBar {
+  display: flex;
+}
+
+
+/* Offers amd Discounts */
+
+.dealDiscountBox {
+  border: 2px solid;
+  padding: 40px 100px 40px 120px;
+  border: 2px solid green;
+  width: 100%;
+  
+}
+
+.dealDiscountBox .discountBox{
+  display: grid;
+  grid-template-columns: 210px 150px 150px 150px 150px 150px;
+  border: 1px solid var(--border-color);
+}
+
+.dealDiscountBox .discountBox .offersDiscountBox{
+  /* border: 1px solid var(--border-color); */
+}
+
+.dealDiscountBox .discountBox .offersDiscountBox .offersDiscountBoxTitle h4{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: var(--base-color);
+}
+
+.dealDiscountBox .discountBox .offersDiscountBox .offersDiscountBoxText p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--grey-500);
+}
+.dealDiscountBox .discountBox .offersDiscountBox .offersDiscountBoxTimer{
+  /* width: 200px; */
+  /* height: 50px; */
+  display: flex;
+}
+.dealDiscountBox .discountBox .offersDiscountBox .offersDiscountBoxTimer > div{
+  /* width:50px; */
+  /* height: 45px; */
+  background-color: var(--base-color-grey-800);
+  padding: 10px;
+  margin: 20px 5px 5px 0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dealDiscountBox .discountBox .offersDiscountBox .offersDiscountBoxTimer > div :first-child{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+.dealDiscountBox .discountBox .offersDiscountBox .offersDiscountBoxTimer > div :last-child{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: var(--white);
+}
+.dealDiscountBox .discountBox .offersDiscountBox .offersDiscountBoxProducts{
+  border: 2px solid;
+}
+
+.dealDiscountBox .discountBox .productDiscountBox .offersDiscountBoxProductsImage{
+  padding: 20px;
+}
+.dealDiscountBox .discountBox .productDiscountBox .offersDiscountBoxProductsImage img{
+  width: 101.42px;
+  height: 121.33px;
+}
+
+
+
+/* Products  */
+
+.productBox{
+  display: grid;
+  padding: 40px 100px 40px 120px;
+  border: 2px solid green;
+  width: 100%;
+}
+.productBox .homeDecoreProductBox{
+  display: grid;
+  /* grid-template-columns: 240px 200px 200px 200px 200px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  /* grid-template-rows: repeat(2, 300px); */
+  grid-template-rows: repeat(2,125px);
+  /* border: 1px solid var(--border-color); */
+}
+.productBox .homeDecoreProductBox .homeDecoreProductLeft{
+  background-image: url('./images/left.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center ;
+  grid-row: span 2;
+  grid-column: span 1;
+}
+.productBox .homeDecoreProductBox .homeDecoreProductLeft .homeDecoreProductTitle{
+  width: 70%;
+  /* border: 2px solid; */
+}
+.productBox .homeDecoreProductBox .homeDecoreProductLeft .homeDecoreProductTitle h6{
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: var(--section-heading); 
+  padding: 15px;
+}
+.productBox .homeDecoreProductBox .homeDecoreProductLeft .homeDecoreProductButton{
+  margin-left: 10px;
+}
+.productBox .homeDecoreProductBox .homeDecoreProductLeft .homeDecoreProductButton a{
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--section-heading);
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+ 
+}
+.productBox .homeDecoreProductBox .homeDecoreProductLeft .homeDecoreProductButton a:hover{
+  background-color: var(--section-heading);
+  color: var(--white);
+  transform: scale(1.1);
+}
+.productBox .homeDecoreProductBox .homeDecoreProducts{
+  display: flex;
+  /* justify-content: end; */
+  /* align-items: end; */
+  border: 1px solid var(--border-color);
+  padding-left: 10px;
+}
+/* .productBox .homeDecoreProductBox .homeDecoreProducts .homeDecoreProduct .homeDecoreProductTitle {
+  width: 180px;
+  border: 2px solid;
+} */
+.productBox .homeDecoreProductBox .homeDecoreProducts .homeDecoreProduct .homeDecoreProductTitle h6{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--section-heading); 
+  padding: 15px 0;
+}
+.productBox .homeDecoreProductBox .homeDecoreProducts .homeDecoreProduct .homeDecoreProductText {
+  width: 55%;
+}
+.productBox .homeDecoreProductBox .homeDecoreProducts .homeDecoreProduct .homeDecoreProductText span{
+color: var(--grey1);
+}
+.productBox .homeDecoreProductBox .homeDecoreProducts .homeDecoreProductImage{
+  place-content: flex-end;
+}
+
+.productBox .homeDecoreProductBox .homeDecoreProducts .homeDecoreProduct .homeDecoreProductImage img{
+
+ 
+}
+/* Quotation form */
+.quotationBox{
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  justify-items: end;
+  padding: 40px 100px 40px 120px;
+  border: 2px solid green;
+  background-image: linear-gradient(to right, rgba(44,124,241,0.8), rgba(0,209,255,0.5)), url('./images/backgroundImage.png');
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+  width: 82%;
+  /* testing */
+  margin: 0 auto;
+}
+
+.quotationBox .quotationMainText h2{
+  font-size: 32px;
+  line-height: auto;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.quotationBox .quotationMainText p{
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+  color: var(--white);
+  /* margin-bottom: 40px; */
+}
+
+
+.quotationBox .quotationForm{
+  background-color: var(--white);
+  width: 70%;
+  height: 300px;
+}
+
+.quotationBox .quotationForm .quotationFormTitle h4{
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: var(--section-heading);
+ margin: 15px 10px;
+}
+
+.quotationBox .quotationForm form input,.quotationBox .quotationForm form textarea{
+  width: 95%;
+  padding: 5px;
+  margin: 8px 7px;
+  border: 1px solid gray ;
+}
+
+.quotationBox .quotationForm form .quotationFormItem{
+  display: flex;
+}
+.quotationBox .quotationForm form .quotationFormItem .quotationFormItemQuantity{
+  width: 45%;
+}
+
+.quotationBox .quotationForm form .quotationFormItem .quotationFormItemPieces select{
+  width: 100%;
+  padding: 5px;
+  margin: 8px 7px;
+}
+.quotationBox .quotationForm form .sendInqueryBtn button{
+  background-color: var(--subscribe-btn);
+  padding: 8px;
+  border: navy;
+  color: var(--white);
+  margin: 7px 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+/* Recommended Items */
+
+.recommendedBox{
+  display: grid;
+  padding: 40px 100px 40px 120px;
+  border: 2px solid green;
+  width: 100%;
+  margin: 0 auto;
+}
+.recommendedBox .recommendedBoxTitle h3 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: var(--section-heading);
+  margin-bottom: 40px;
+}
+
+.recommendedBox .recommendedItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-rows: repeat(2, 300px);
+  gap: 10px;
+}
+
+.recommendedBox .recommendedItems .recommendedItem {
+  border: 2px solid;
+  display: grid;
+  /* justify-items: center; */
+}
+
+.recommendedBox .recommendedItems .recommendedItem .recomendedItemImage img {
+  /* height: 100px; */
+  width: 190px;
+}
+
+.recommendedBox .recommendedItems .recommendedItem .recomendedItemPrice span {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--section-heading);
+  /* margin-bottom: 5px; */
+  padding: 0 10px;
+}
+
+.recommendedBox .recommendedItems .recommendedItem .recomendedItemText p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--price-text);
+  letter-spacing: -0.2px;
+  padding: 0 10px;
+}
+
+/* Services */
+
+.servicesBox{
+ 
+  display: grid;
+  padding: 40px 100px 40px 120px;
+  border: 2px solid purple;
+  width: 100%;
+  margin: 0 auto;
+}
+.servicesBox .servicesBoxTitle h3 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: var(--section-heading);
+  margin-bottom: 40px;
+}
+
+.servicesBox .servicesDetails{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-rows: repeat(1, 200px);
+  gap: 10px;
+}
+
+.servicesBox .servicesDetails .serviceDetail{
+  border: 2px solid;
+}
+
+.servicesBox .servicesDetails .serviceDetail .serviceDetailImage img{
+  width: 100%;
+}
+
+.servicesBox .servicesDetails .serviceDetail .serviceDetailText{
+  border: 2px solid;
+  width: 65%;
+  margin-left: 10px;
+
+}
+.servicesBox .servicesDetails .serviceDetail .serviceDetailText p{
+  font-size: 16x;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--section-heading);
+  margin-top: 10px;
+}
+
+.servicesBox .servicesDetails .serviceDetail:nth-child(3) .serviceDetailText {
+  width: 76%;
+}
+
+/* Suppliers */
+
+.suppliersDetilsBox{
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
+  /* grid-template-rows: repeat(1, 200px); */
+  /* gap: 10px; */
+  padding: 40px 100px 40px 120px;
+  border: 2px soid red;
+  width: 100%;
+  /* testing */
+}
+.suppliersDetilsBox .suppliersBoxTitle h3{
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: var(--section-heading);
+  margin-bottom: 40px;
+}
+
+.suppliersDetilsBox .suppliersDetails{
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(2,50px);
+}
+.suppliersDetilsBox .suppliersDetails .supplierDetail{
+  display: flex;
+  align-items: center;
+  border: 2px solid;
+}
+.suppliersDetilsBox .suppliersDetails .supplierDetail .supplierDetailImage img{
+  height: 30px;
+  /* width: px; */
+}
+.suppliersDetilsBox .suppliersDetails .supplierDetail .supplierDetailText{
+  margin-left: 10px;
+}
+.suppliersDetilsBox .suppliersDetails .supplierDetail .supplierDetailText h6{
+  font-size: 16px;
+  /* line-height: 24px; */
+  letter-spacing: -0.2px;
+  font-weight: 400;
+  color: var(--section-heading);
+}
+.suppliersDetilsBox .suppliersDetails .supplierDetail .supplierDetailText small{
+  font-size: 13px;
+  /* line-height: auto; */
+  font-weight: 400;
+  color: var(--grey1);
+}
+
+/* Subscribe box CSS */
+.subscribeBox {
+  display: grid;
+  justify-items: center;
+  padding: 30px;
+  border: 2px solid;
+  background-color: var(--section-bg);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subscribeBox .subscribeBoxTitle h4 {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: var(--section-heading);
+  margin-bottom: 5px;
+}
+
+.subscribeBox .subscribeBoxText p {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+  color: var(--subscribe-text);
+  margin-bottom: 10px;
+}
+
+.subscribeBox .subscribeBoxForm {
+  display: flex;
+}
+
+.subscribeBox .subscribeBoxForm input {
+  /* height: 30px; */
+  width: 280px;
+}
+
+.subscribeBox .subscribeBoxForm button {
+  height: 30px;
+  width: 80px;
+  margin-left: 6px;
+  background-color: var(--subscribe-btn);
+  border: none;
+  color: var(--white);
+  border-radius: 5px;
+}
+
+
+/* Footer CSS */
+footer{
+  width: 100%;
+  border: 2px solid;
+}
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 180px));
+  /* grid-auto-rows: 200px; */
+  justify-items: center;
+  justify-content: center;
+  /* grid-template-rows: repeat(2, 300px); */
+  /* padding: 0px 50px 40px px; */
+  border: 2px solid;
+
+}
+
+
+.footer .footerMainBox .companyText p {
+  color: var(--footer-text);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer .footerMainBox .companySocialLinks ul {
+  display: flex;
+  /* padding: 20px; */
+}
+
+.footer .footerMainBox .companySocialLinks ul li {
+  padding: 10px 13px 0 0;
+}
+
+.footer .footerMainBox .companySocialLinks ul li a img {
+  height: 30px;
+  width: 30px;
+}
+
+.footer h6 {
+  color: var(--section-heading);
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.footer ul li {
+  list-style: none;
+}
+
+.footer ul li a {
+  color: var(--footer-links);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+/* media queries */
+
+@media screen and (max-width:1210px) {
+  .footer {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    background-color: yellow;
+    justify-items: center;
+    justify-content: center;
+
+  
+  }
+}
+
+@media screen and (min-width:967px) and (max-width:1112px){
+  .footer {
+    /* width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    background-color: yellow;
+    grid-auto-rows: 200px;
+    justify-items: center;
+    justify-content: center;
+    border: 2px solid; */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1200px));
+    background-color: #127FFF;
+    /* grid-template-columns: 1fr 1fr ; */
+  
+  }
+}
+
+
+
+@media screen and (max-width:480px) {
+  .footer {
+    /* width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    grid-auto-rows: 200px;
+    justify-items: center;
+    justify-content: center;
+    border: 2px solid; */
+    grid-template-columns: 1fr;
+    background-color: green;
+  
+  }
+}

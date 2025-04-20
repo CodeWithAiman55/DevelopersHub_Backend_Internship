@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Product (Admin Only)</title>
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+</head>
+<body>
+  <h1>Add Product</h1>
+
+  <form id="productForm">
+    <input type="text" id="name" placeholder="Product Name" required>
+    <input type="number" id="price" placeholder="Price" required>
+    <button type="submit">Add Product</button>
+  </form>
+
+  <script>
+    // 🔒 Access Protection Code
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = "/login.html";
+    }
+
+    const user = jwt_decode(token);
+    if (user.role !== 'admin') {
+      alert("Access Denied!");
+      window.location.href = "/user-home.html";
+    }
+
+    // ✅ Product Add Logic
+    document.getElementById('productForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const price = document.getElementById('price').value;
+
+      const response = await fetch('http://localhost:3000/api/add-product', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ name, price })
+      });
+
+      const result = await response.json();
+      alert(result.message || 'Product added!');
+    });
+  </script>
+</body>
+</html>

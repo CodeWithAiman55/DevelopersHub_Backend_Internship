@@ -1,0 +1,57 @@
+// const mongoose = require("mongoose");
+// const StudentSchema = new mongoose.Schema({
+//     'name':{
+//         type:String,
+//         require:true,
+//     },
+//     'city':{
+//         type:String,
+//         require:true,
+//     },
+//     'email':{
+//         type:String,
+//         require:true,
+//     },
+//     'contact':{
+//         type:String,
+//         require:true,
+//     }
+// });
+// const StudentModel = new mongoose.model('crud', StudentSchema);
+
+// module.exports = StudentModel;
+
+
+
+const mongoose = require("mongoose");
+
+const productSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String, // Store image URL or path
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  stock: {
+    type: Number,
+    required: true,
+  }
+}, {
+  timestamps: true // Adds createdAt and updatedAt fields
+});
+
+module.exports = mongoose.model("Product", productSchema);

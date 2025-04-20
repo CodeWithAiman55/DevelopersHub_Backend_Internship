@@ -1,0 +1,285 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --section-heading: #1C1C1C;
+  --footer-links: #8B96A5;
+  --grey1: #8B96A5;
+  --footer-text: #505050;
+  --footer-text: #505050;
+  --subscribe-text: #505050;
+  /* --subscribe-btn: #0067FF; */
+  --subscribe-btn: #127FFF;
+  --white: #ffffff;
+  --section-bg: #EFF2F4;
+  --price-text: #8B96A5;
+  --border-color: #E0E0E0;
+  --border-product-listing: #DEE2E7;
+  --star: #FF9017;
+  --green: #00B517;
+  --blue1: #0D6EFD;
+}
+
+body {
+  font-family: inter;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
+  /* grid-template-rows: repeat(2, 300px); */
+  /* grid-template-rows: repeat(2,125px); */
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+  padding: 40px 30px 40px 30px;
+}
+
+.main .filterCategoriesBox {
+  flex-basis: 23%;
+  /* border: 2px solid; */
+}
+
+.main .filterCategoriesBox .categoryBox, .main .filterCategoriesBox .filterCategoriesList, .main .filterCategoriesBox .featureCategoriesList, .main .filterCategoriesBox .starCategoriesList,  .main .filterCategoriesBox .conditionCategoriesList{
+  border-top: 1px solid var(--grey1);
+  border-bottom: 1px solid var(--grey1);
+  padding: 10px 0;
+}
+
+.main .filterCategoriesBox .categoryBox h4, .main .filterCategoriesBox .filterCategoriesList h4, .main .filterCategoriesBox .featureCategoriesList h4, .main .filterCategoriesBox .conditionCategoriesList h4{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--section-heading);
+  margin-bottom: 10px;
+}
+
+.main .filterCategoriesBox .categoryBox ul {}
+
+.main .filterCategoriesBox .categoryBox ul li {
+  padding: 7px 0;
+  list-style: none;
+  /* margin: 10px; */
+}
+
+.main .filterCategoriesBox .categoryBox ul li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--footer-text);
+  padding: 16px 0;
+}
+
+#see-more a {
+  color: #0D6EFD;
+  /* margin-bottom: 10px; */
+}
+
+.main .filterCategoriesBox .filterCategoriesList label, .main .filterCategoriesBox .featureCategoriesList label, .main .filterCategoriesBox .starCategoriesList label, .main .filterCategoriesBox .conditionCategoriesList label{
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--footer-text);
+  padding: 6px 0;
+}
+
+.main .productListingBox {
+  flex-basis: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.main .productListingBox .productListBox{
+  display: grid;
+  /* grid-template-columns: 200px 200px 200px; */
+  /* border: 1px solid var(--border-product-listing); */
+  box-shadow: 0px 4px 8px rgba(222, 226, 231, 0.9); 
+}
+
+.main .productListingBox .productListBox .productImage{
+  width: 100%;
+  padding: 15px 10px;
+}
+
+.main .productListingBox .productListBox .productText h6{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  padding: 10px 25px;
+  color: var(--section-heading);
+}
+.main .productListingBox .productListBox .productText .productPricing{
+  padding: 10px 25px;
+}
+.main .productListingBox .productListBox .productText .productPricing .productPrice{
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 20px;
+  font-weight: 600;
+  color: var(--section-heading);
+}
+
+.main .productListingBox .productListBox .productText .productPricing .discount-price{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grey1);
+}
+.main .productListingBox .productListBox .productText .productRating {
+  padding: 0px 25px;
+}
+.main .productListingBox .productListBox .productText .productRating i{
+  color: var(--star);
+  font-size: 16px;
+}
+
+.main .productListingBox .productListBox .productText .productRating :nth-child(6){
+  color: var(--star);
+  font-size: 16px;
+}
+.main .productListingBox .productListBox .productText .productRating :nth-child(7),.main .productListingBox .productListBox .productText .productRating :nth-child(9){
+  color: var(--border-product-listing);
+  font-size: 8px;
+}
+.main .productListingBox .productListBox .productText .productRating :nth-child(8){
+  color: var(--grey1);
+  font-size: 16px;
+}
+.main .productListingBox .productListBox .productText .productRating :nth-child(10){
+  color: var(--green);
+  font-size: 16px;
+}
+.main .productListingBox .productListBox .productText .productShortDescription p{
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  color: var(--footer-links);
+  padding: 8px 25px;
+}
+.main .productListingBox .productListBox .productText .viewDetailsBtn a{
+  color: var(--blue1);
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  padding: 8px 25px;
+}
+/* Subscribe box CSS */
+.subscribeBox {
+  display: grid;
+  justify-items: center;
+  padding: 30px;
+  border: 2px solid;
+  background-color: var(--section-bg);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subscribeBox .subscribeBoxTitle h4 {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  color: var(--section-heading);
+  margin-bottom: 5px;
+}
+
+.subscribeBox .subscribeBoxText p {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+  color: var(--subscribe-text);
+  margin-bottom: 10px;
+}
+
+.subscribeBox .subscribeBoxForm {
+  display: flex;
+}
+
+.subscribeBox .subscribeBoxForm input {
+  /* height: 30px; */
+  width: 280px;
+}
+
+.subscribeBox .subscribeBoxForm button {
+  height: 30px;
+  width: 80px;
+  margin-left: 6px;
+  background-color: var(--subscribe-btn);
+  border: none;
+  color: var(--white);
+  border-radius: 5px;
+}
+
+
+
+/* Footer CSS */
+.footer {
+  display: grid;
+  /* grid-template-columns: 300px 150px 150px 150px 150px 200px; */
+  /* grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 100px));
+  /* grid-template-rows: repeat(2, 300px); */
+  padding: 40px 50px 40px 120px;
+  border: 2px solid;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer .footerMainBox .companyText p {
+  color: var(--footer-text);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer .footerMainBox .companySocialLinks ul {
+  display: flex;
+  /* padding: 20px; */
+}
+
+.footer .footerMainBox .companySocialLinks ul li {
+  padding: 10px 13px 0 0;
+}
+
+.footer .footerMainBox .companySocialLinks ul li a img {
+  height: 30px;
+  width: 30px;
+}
+
+.footer h6 {
+  color: var(--section-heading);
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.footer ul li {
+  list-style: none;
+}
+
+.footer ul li a {
+  color: var(--footer-links);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+}

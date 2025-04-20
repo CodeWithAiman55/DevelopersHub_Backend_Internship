@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- Navigation Menu -->
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="#">
+              <img src="./images/logo-colored.png" alt="logo">
+            </a>
+          </div>
+
+          <!-- search section -->
+          <div class="searchBar">
+            <!-- search input field -->
+            <input type="search" name="" id="" class="searchInput" placeholder="Search">
+            <!-- search select -->
+            <select name="" id="" class="searchSelect">
+              <option value="allCategory">All Category</option>
+              <option value="option2"></option>
+              <option value="option3"></option>
+            </select>
+            <!-- search button -->
+            <button type="submit" class="searchBtn">Search</button>
+          </div>
+
+          <!-- Icons Section (Profile, Messages, Cart) -->
+          <div class="icon-links">
+            <a href="#" class="icon-link"><i class="fas fa-user"></i></a> <!-- Profile Icon -->
+            <a href="#" class="icon-link"><i class="fas fa-envelope"></i></a> <!-- Messages Icon -->
+            <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i></a> <!-- Cart Icon -->
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Deals And Offers -->
+
+      <section class="dealDiscountBox">
+        <article class="discountBox">
+          <article class="offersDiscountBox">
+            <div class="offersDiscountBoxTitle">
+              <h4>Deals and offers</h4>
+            </div>
+            <div class="offersDiscountBoxText">
+              <p>Hygiene equipments</p>
+            </div>
+            <div class="offersDiscountBoxTimer">
+              <div class="days">
+                <span>04</span>
+                <span>Days</span>
+              </div>
+              <div class="hours">
+                <span>13</span>
+                <span>Hour</span>
+              </div>
+              <div class="minutes">
+                <span>34</span>
+                <span>Min</span>
+              </div>
+              <div class="seconds">
+                <span>56</span>
+                <span>Sec</span>
+              </div>
+
+            </div>
+          </article>
+
+          <% products.forEach(product => { %>
+            <article class="productDiscountBox">
+              <a href="/products/<%= product._id %>">
+                <div class="offersDiscountBoxProductsImage">
+                  <img src="<%= product.image %>" alt="<%= product.name %>">
+                </div>
+                <div class="offersDiscountBoxProductsText">
+                  <span><%= product.name %></span>
+                </div>
+                <div class="offersDiscountBoxProductsDiscount">
+                  <span><%= product.discount %>%</span>
+                </div>
+              </a>
+            </article>
+          <% }); %>
+          
+          <!-- <article class="productDiscountBox">
+            <div class="offersDiscountBoxProductsImage">
+              <img src="./images/watch.png" alt="watch">
+            </div>
+            <div class="offersDiscountBoxProductsText">
+              <span>Smart Watches</span>
+            </div>
+            <div class="offersDiscountBoxProductsDiscount">
+              <span>-25%</span>
+            </div>
+          </article>
+          <article class="productDiscountBox">
+            <div class="offersDiscountBoxProductsImage">
+              <img src="./images/watch.png" alt="watch">
+            </div>
+            <div class="offersDiscountBoxProductsText">
+              <span>Smart Watches</span>
+            </div>
+            <div class="offersDiscountBoxProductsDiscount">
+              <span>-25%</span>
+            </div>
+          </article>
+          <article class="productDiscountBox">
+            <div class="offersDiscountBoxProductsImage">
+              <img src="./images/watch.png" alt="watch">
+            </div>
+            <div class="offersDiscountBoxProductsText">
+              <span>Smart Watches</span>
+            </div>
+            <div class="offersDiscountBoxProductsDiscount">
+              <span>-25%</span>
+            </div>
+          </article>
+          <article class="productDiscountBox">
+            <div class="offersDiscountBoxProductsImage">
+              <img src="./images/watch.png" alt="watch">
+            </div>
+            <div class="offersDiscountBoxProductsText">
+              <span>Smart Watches</span>
+            </div>
+            <div class="offersDiscountBoxProductsDiscount">
+              <span>-25%</span>
+            </div>
+          </article>
+          <article class="productDiscountBox">
+            <div class="offersDiscountBoxProductsImage">
+              <img src="./images/watch.png" alt="watch">
+            </div>
+            <div class="offersDiscountBoxProductsText">
+              <span>Smart Watches</span>
+            </div>
+            <div class="offersDiscountBoxProductsDiscount">
+              <span>-25%</span>
+            </div>
+          </article> -->
+        </article>
+      </section>
+
+      <!-- products box and home decore -->
+
+      <section class="productBox">
+        <article class="homeDecoreProductBox">
+          <article class="homeDecoreProductLeft">
+            <div class="homeDecoreProductTitle">
+              <h6>Home and outdoor</h6>
+            </div>
+            <div class="homeDecoreProductButton">
+              <a href="">Source Now</a>
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/sofa.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/lamp.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/foam.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/mudPot.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/juicer.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/coffemaker.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/kitchenRack.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/plant.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+        </article>
+      </section>
+
+
+      <section class="productBox">
+        <article class="homeDecoreProductBox">
+          <article class="homeDecoreProductLeft">
+            <div class="homeDecoreProductTitle">
+              <h6>Home and outdoor</h6>
+            </div>
+            <div class="homeDecoreProductButton">
+              <a href="">Source Now</a>
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/sofa.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/lamp.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/foam.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/mudPot.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/juicer.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/coffemaker.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/kitchenRack.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+          <article class="homeDecoreProducts">
+            <div class="homeDecoreProduct">
+              <div class="homeDecoreProductTitle">
+                <h6>Soft chairs</h6>
+              </div>
+
+              <div class="homeDecoreProductText">
+                <span> From USD 19</span>
+              </div>
+            </div>
+            <div class="homeDecoreProductImage">
+              <img src="./images/plant.png" alt="homeDecoreProductImage">
+            </div>
+          </article>
+        </article>
+
+      </section>
+
+      <!-- Quotation Form -->
+
+      <section class="quotationBox imageOverlay">
+        <article class="quotationMainText">
+          <h2>An easy way to send requests to all suppliers</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+        </article>
+        <article class="quotationForm">
+          <div class="quotationFormTitle">
+            <h4>Send quote to suppliers</h4>
+          </div>
+          <form action="#" method="post">
+            <div class="quotationFormItemName">
+              <label for=" itemName"></label>
+              <input type="text" name="itemName" id="itemName" placeholder="What Item You Need">
+            </div>
+            <div class="quotationFormTextArea">
+              <textarea name="" id="" placeholder="Type More Details" cols="50" rows="3"></textarea>
+            </div>
+            <div class="quotationFormItem">
+              <div class="quotationFormItemQuantity">
+                <input type="number" name="" id="" placeholder="Quantity">
+              </div>
+              <div class="quotationFormItemPieces">
+                <select name="" id="">
+                  <option value="1">Pcs</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="sendInqueryBtn">
+              <button type="submit">Send Inquery</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <!-- Recommended Items -->
+
+      <section class="recommendedBox">
+        <div class="recommendedBoxTitle">
+          <h3>Recommended Items</h3>
+        </div>
+        <article class="recommendedItems">
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/shirt.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$10.30</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>Jeans shorts for menblue color</p>
+            </div>
+          </article>
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/jacket.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$10.30</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>T-shirts with multiple colors, for men</p>
+            </div>
+          </article>
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/coat.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$12.50</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>Brown winter coatmedium size</p>
+            </div>
+          </article>
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/bag.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$34.00</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>Jeans bag for travel for men</p>
+            </div>
+          </article>
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/wallet.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$99.00</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>Leather wallet</p>
+            </div>
+          </article>
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/shorts.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$9.99</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>Canon camera black, 100x zoom</p>
+            </div>
+          </article>
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/headset.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$8.99</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>Headset for gamingwith mic</p>
+            </div>
+          </article>
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/wallet.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$10.30</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>Smartwatch silver color modern</p>
+            </div>
+          </article>
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/pot.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$10.30</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>Blue wallet for menleather metarfial</p>
+            </div>
+          </article>
+
+          <article class="recommendedItem">
+            <div class="recomendedItemImage">
+              <img src="./images/jug.png" alt="recomendedItemImage">
+            </div>
+            <div class="recomendedItemPrice">
+              <span>$80.95</span>
+            </div>
+            <div class="recomendedItemText">
+              <p>Jeans bag for travelfor men</p>
+            </div>
+          </article>
+
+        </article>
+      </section>
+
+      <!-- Services -->
+
+      <section class="servicesBox">
+        <div class="servicesBoxTitle">
+          <h3>Our Extra Services</h3>
+        </div>
+
+        <article class="servicesDetails">
+          <article class="serviceDetail">
+            <div class="serviceDetailImage">
+              <img src="./images/serviceDetail1.png" alt="serviceDetailImage">
+            </div>
+            <div class="serviceDetailText">
+              <p>Source from Industry Hubs</p>
+            </div>
+          </article>
+
+          <article class="serviceDetail">
+            <div class="serviceDetailImage">
+              <img src="./images/serviceDetail2.png" alt="serviceDetailImage">
+            </div>
+            <div class="serviceDetailText">
+              <p>Customize Your Products</p>
+            </div>
+          </article>
+
+          <article class="serviceDetail">
+            <div class="serviceDetailImage">
+              <img src="./images/serviceDetail3.png" alt="serviceDetailImage">
+            </div>
+            <div class="serviceDetailText">
+              <p>Fast, reliable shipping by ocean or air</p>
+            </div>
+          </article>
+
+          <article class="serviceDetail">
+            <div class="serviceDetailImage">
+              <img src="./images/serviceDetail4.png" alt="serviceDetailImage">
+            </div>
+            <div class="serviceDetailText">
+              <p>Product monitoring and inspection</p>
+            </div>
+          </article>
+        </article>
+      </section>
+
+      <!-- Suppliers -->
+      <section class="suppliersDetilsBox">
+        <div class="suppliersBoxTitle">
+          <h3>Suppliers By Region</h3>
+        </div>
+        <article class="suppliersDetails">
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag1.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>Arabic Emirates</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag2.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>Australia</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag3.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>United States</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag4.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>Russia</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag5.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>Italy</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag6.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>Denmark</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag7.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>France</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag1.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>Arabic Emirates</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag9.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>China</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+          <article class="supplierDetail">
+            <div class="supplierDetailImage">
+              <img src="./images/flag10.png" alt="serviceDetailImage">
+            </div>
+            <div class="supplierDetailText">
+              <h6>Great Britain</h6>
+              <small>shopname.ae</small>
+            </div>
+          </article>
+        </article>
+      </section>
+
+      <!-- Newsletter box section -->
+      <section class="subscribeBox">
+        <div class="subscribeBoxTitle">
+          <h4>Subscribe on our newsletter</h4>
+        </div>
+        <div class="subscribeBoxText">
+          <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+        </div>
+        <form action="#" method="post" class="subscribeBoxForm">
+          <label for="email"></label>
+          <input type="email" name="email" id="email" placeholder="Email" role="form" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+
+      <article class="footerMainBox">
+        <div class="companyImage">
+          <img src="./images/logo-colored.png" alt="Company Logo">
+        </div>
+
+        <div class="companyText">
+          <p>Best information about the company gies here but now lorem ipsum is</p>
+        </div>
+
+        <div class="companySocialLinks">
+          <ul class="social-links">
+            <li class="facebook">
+              <a href="https://www.facebook.com/">
+                <img src="./images/youtuble logo_icon.svg" alt="facebook_icon">
+              </a>
+            </li>
+            <li class="twitter">
+              <a href="https://www.twitter.com/">
+                <img src="./images/youtuble logo_icon.svg" alt="twitter_icon">
+              </a>
+            </li>
+            <li class="linkedin">
+              <a href="https://www.linkedin.com/" target="_blank">
+                <img src="./images/youtuble logo_icon.svg" alt="linkedin_icon">
+              </a>
+            </li>
+            <li class="instagram">
+              <a href="https://www.instagram.com/" target="_blank">
+                <img src="./images/youtuble logo_icon.svg" alt="instagram_icon">
+              </a>
+            </li>
+            <li class="youtube">
+              <a href="https://www.youtube.com/" target="_blank">
+                <img src="./images/youtuble logo_icon.svg" alt="youtube_icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </article>
+
+      <article class="footerAboutBox">
+        <h6>About</h6>
+        <ul>
+          <li>
+            <a href="">About Us</a>
+          </li>
+          <li>
+            <a href="">Find Stores</a>
+          </li>
+          <li>
+            <a href="">Categories</a>
+          </li>
+          <li>
+            <a href="">Blogs</a>
+          </li>
+        </ul>
+      </article>
+
+      <article class="footerPartnershipBox">
+        <h6>Partnership</h6>
+        <ul>
+          <li>
+            <a href="">About Us</a>
+          </li>
+          <li>
+            <a href="">Find Stores</a>
+          </li>
+          <li>
+            <a href="">Categories</a>
+          </li>
+          <li>
+            <a href="">Blogs</a>
+          </li>
+        </ul>
+      </article>
+
+      <article class="footerInfoBox">
+        <h6>Information</h6>
+        <ul>
+          <li>
+            <a href="">Help Center</a>
+          </li>
+          <li>
+            <a href="">Money Refund</a>
+          </li>
+          <li>
+            <a href="">Shipping</a>
+          </li>
+          <li>
+            <a href="">Contact Us</a>
+          </li>
+        </ul>
+      </article>
+
+      <article class="footerUsersBox">
+        <h6>For Users</h6>
+        <ul>
+          <li>
+            <a href="">Login</a>
+          </li>
+          <li>
+            <a href="">Register</a>
+          </li>
+          <li>
+            <a href="">Settings</a>
+          </li>
+          <li>
+            <a href="">My Orders</a>
+          </li>
+        </ul>
+      </article>
+
+      <article class="footerGetAppBox">
+        <h6>Get App</h6>
+        <div class="AppleStoreButton">
+          <img src="./images/market-button.png" alt="Download on the App Store">
+        </div>
+        <div class="googleStoreButton">
+          <img src="./images/market-button-1.png" alt="Get it on Google Play">
+        </div>
+      </article>
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="/css/productDetail.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <!-- header -->
+    <header>
+      <nav class="navigation-menu">
+        <div class="logo">
+          <a href="./home.html" aria-label="Homepage" target="_self" class="homepage-redirect-link">
+            <img src="/images/logo-colored.png" alt="Website Logo">
+          </a>
+        </div>
+
+        <!-- Icons Section (Profile, Messages, Cart) -->
+        <div class="icon-links">
+          <ul>
+            <li>
+              <a href="#" target="_self" class="icon-link" aria-label="Go to Profile">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+              </a> <!-- Profile Icon -->
+            </li>
+            <li>
+              <a href="#" target="_self" class="icon-link" aria-label="Go to Message">
+                <i class="fas fa-envelope"></i>
+                <span>Message</span>
+              </a> <!-- Messages Icon -->
+            </li>
+            <li>
+              <a href="#" target="_self" class="icon-link" aria-label="Go to Orders">
+                <i class="fa-solid fa-heart"></i>
+                <span>Orders</span>
+              </a> <!-- Wishlist Icon  -->
+            </li>
+            <li>
+              <a href="#" target="_self" class="icon-link" aria-label="Go to Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span>My cart</span>
+              </a> <!-- Cart Icon -->
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    <main>
+
+      <!-- Main Content Section -->
+
+      <section class="mainContentBox">
+        <article class="mainContent">
+       
+          <div class="productMediaViewer">
+            <% if (product.viewImages && product.viewImages.length > 0) { %>
+              <% product.viewImages.forEach(function(image) { %>
+                <!-- <img src="/images/<%= image %>" alt="product view"> -->
+                <!-- <img src="<%= product.image %>" alt="Product Image"> -->
+                <!-- <img src="<%= product.viewImages[0] %>" alt="Product image"> -->
+                <% product.viewImages.forEach(function(img) { %>
+                  <img src="<%= img %>" alt="Product image">
+                <% }) %>
+                
+
+
+                <!-- <img src="/images/productImage1.png" alt="test image"> -->
+
+              <% }); %>
+            <% } else { %>
+              <p>No images available</p>
+            <% } %>
+          </div>
+          
+
+
+       <!-- <article class="productMedia">
+        <div class="productMediaImage">
+          <img src="/images/productImage1.png" alt="product image">
+        </div>
+        <div class="productMediaViewer">
+          <img src="/images/productImage1.png" alt="product view1">
+          <img src="/images/productImage1.png" alt="product view2">
+          <img src="/images/productImage1.png" alt="product view3">
+          <img src="/images/productImage1.png" alt="product view4">
+          <img src="/images/productImage1.png" alt="product view5">
+          <img src="/images/productImage1.png" alt="product view6">
+        </div>
+      </article> -->
+
+          <article class="productMediaDetail">
+            <div class="productMediaIcon">
+              <span><i class="fa-solid fa-check"></i></span>
+              <span><%= product.availability ? 'In Stock' : 'Out of Stock' %></span>
+            </div>
+      
+            <div class="productMediaText">
+              <h4><%= product.name %></h4>
+            </div>
+      
+            <div class="productMediaMeta">
+              <!-- Rating Stars -->
+              <span class="ratingStar">
+                <% for (let i = 0; i < 5; i++) { %>
+                  <i class="fa-solid fa-star"></i>
+                <% } %>
+              </span>
+      
+              <!-- Rating Value -->
+              <span class="rating"><%= product.rating %></span>
+      
+              <span class="circle">
+                <i class="fa-solid fa-circle"></i>
+              </span>
+      
+              <!-- Reviews -->
+              <span class="reviews">
+                <i class="fa-regular fa-message"></i>
+                <span><%= product.reviewsCount %> reviews</span>
+              </span>
+      
+              <span class="circle">
+                <i class="fa-solid fa-circle"></i>
+              </span>
+      
+              <!-- Sold Count -->
+              <span class="sold">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span><%= product.soldCount %> sold</span>
+              </span>
+            </div>
+      
+            <div class="productPricing">
+              <% if (product.prices && product.prices.length > 0) { %>
+                <% product.prices.forEach(function(price) { %>
+                  <div class="priceLine">
+                    <h5 class="finalprice"><%= price.amount %></h5>
+                    <span><%= price.quantityRange %></span>
+                  </div>
+                <% }); %>
+              <% } else { %>
+                <p>No pricing information available</p>
+              <% } %>
+            </div>
+      
+            <!-- Table -->
+            <div class="productDescTable">
+              <table class="table">
+                <tr>
+                  <th>Price:</th>
+                  <td><%= product.priceNegotiable ? 'Negotiable' : product.price %></td>
+                </tr>
+                <tr>
+                  <th>Type:</th>
+                  <td><%= product.type %></td>
+                </tr>
+                <tr>
+                  <th>Material:</th>
+                  <td><%= product.material %></td>
+                </tr>
+                <tr>
+                  <th>Design:</th>
+                  <td><%= product.design %></td>
+                </tr>
+                <tr>
+                  <th>Customization:</th>
+                  <td><%= product.customization %></td>
+                </tr>
+                <tr>
+                  <th>Protection:</th>
+                  <td><%= product.protection %></td>
+                </tr>
+                <tr>
+                  <th>Warranty:</th>
+                  <td><%= product.warranty %></td>
+                </tr>
+              </table>
+            </div>
+          </article>
+      
+          <aside class="supplierDetails">
+            <div class="supplierName">
+              <div class="supplierLetter">
+                <span>R</span>
+              </div>
+              <div>
+                <span>Supplier</span>
+                <span>Guanjoi Trading LLC</span>
+              </div>
+            </div>
+            <hr>
+
+            <div class="supplierDetail">
+              <div class="supplierResidence">
+                <img src="/images/flag.png" alt="germany flag">
+                <span>Germany, Berlin</span>
+              </div>
+              <div class="supplierStatus">
+                <span><i class="fa-solid fa-check"></i></span>
+                <span>Verified Seller</span>
+              </div>
+              <div class="supplyMode">
+                <span><i class="fa-solid fa-globe"></i></span>
+                <span>Worldwide shipping</span>
+              </div>
+              <div class="sendInqueryBtn">
+                <button type="button">Send Inquery</button>
+              </div>
+              <div class="showSellerProfile">
+                <a href="#">Seller's Profile</a>
+              </div>
+            </div>
+          </aside>
+          
+        </article>
+      </section>
+      
+
+      <!-- Accordian Section -->
+      <section class="accordianBox">
+        <div class="articles-container">
+
+          <article class="accordianGrid">
+
+            <!-- Accordian Tabs -->
+            <div class="accordianTabs">
+              <button class="accordianBtn active" data-tab="description">Description</button>
+              <button class="accordianBtn" data-tab="reviews">Reviews</button>
+              <button class="accordianBtn" data-tab="shipping">Shipping</button>
+              <button class="accordianBtn" data-tab="seller">About Seller</button>
+            </div>
+
+            <!-- Accordian Content -->
+            <div class="accordianContentBox">
+              <div class="tab-content active" id="description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  <br>
+                  Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+              <div class="tab-content" id="reviews">
+                <p>This is the reviews content...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  <br>
+                  Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+              <div class="tab-content" id="shipping">
+                <p>Shipping information goes here...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  <br>
+                  Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+              <div class="tab-content" id="seller">
+                <p>About seller info here...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  <br>
+                  Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+            </div>
+
+            <!-- Product Specification Table -->
+            <div class="productSpecs">
+              <table>
+                <tr>
+                  <th>Model</th>
+                  <td>#8786867</td>
+                </tr>
+                <tr>
+                  <th>Style</th>
+                  <td>Classic style</td>
+                </tr>
+                <tr>
+                  <th>Certificate</th>
+                  <td>ISO-898921212</td>
+                </tr>
+                <tr>
+                  <th>Size</th>
+                  <td>34mm x 450mm x 19mm</td>
+                </tr>
+                <tr>
+                  <th>Memory</th>
+                  <td>36GB RAM</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Feature List -->
+            <div class="nameFeatures">
+              <ul class="nameFeaturesList">
+                <li><span><i class="fa-solid fa-check"></i></span> Some great feature name here</li>
+                <li><span><i class="fa-solid fa-check"></i></span> Duis aute irure dolor in reprehenderit</li>
+                <li><span><i class="fa-solid fa-check"></i></span> Some great feature name here</li>
+                <li><span><i class="fa-solid fa-check"></i></span> Lorem ipsum dolor sit amet</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Sidebar Area  -->
+          <article class="sideBar">
+            <h6>You may like</h6>
+
+            <article class="sidebarProducts">
+              <div class="sidebarImage">
+                <img src="/images/sidebarImg1.png" alt="sidebar image 1">
+              </div>
+              <div class="sidebarText">
+                <p>Men Blazers Sets Elegant Formal</p>
+                <span>$7.00 - $99.50</span>
+              </div>
+            </article>
+
+            <article class="sidebarProducts">
+              <div class="sidebarImage">
+                <img src="/images/sidebarImg1.png" alt="sidebar image 1">
+              </div>
+              <div class="sidebarText">
+                <p>Men Blazers Sets Elegant Formal</p>
+                <span>$7.00 - $99.50</span>
+              </div>
+            </article>
+
+            <article class="sidebarProducts">
+              <div class="sidebarImage">
+                <img src="/images/sidebarImg1.png" alt="sidebar image 1">
+              </div>
+              <div class="sidebarText">
+                <p>Men Blazers Sets Elegant Formal</p>
+                <span>$7.00 - $99.50</span>
+              </div>
+            </article>
+
+            <article class="sidebarProducts">
+              <div class="sidebarImage">
+                <img src="/images/sidebarImg1.png" alt="sidebar image 1">
+              </div>
+              <div class="sidebarText">
+                <p>Men Blazers Sets Elegant Formal</p>
+                <span>$7.00 - $99.50</span>
+              </div>
+            </article>
+
+            <article class="sidebarProducts">
+              <div class="sidebarImage">
+                <img src="/images/sidebarImg1.png" alt="sidebar image 1">
+              </div>
+              <div class="sidebarText">
+                <p>Men Blazers Sets Elegant Formal</p>
+                <span>$7.00 - $99.50</span>
+              </div>
+            </article>
+
+          </article>
+        </div>
+      </section>
+
+      <!-- Featured Products Section -->
+
+      <section class="featuredBox">
+
+        <article class="featuredProductsBox">
+
+          <div class="featuredProducts">
+            <div class="featuredProductsBoxHeading">
+              <h3>Related Products</h3>
+            </div>
+
+            <article class="featuredProductBox">
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="/images/featuresImg1.png" alt="">
+                </div>
+                <div class="featuredProductDesc">
+                  <p> Xiaomi Redmi 8 Original </p>
+                </div>
+                <div class="featuredProductPrice">
+                  <span>$32.00-$40.00</span>
+                </div>
+              </article>
+
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="/images/featuresImg2.png" alt="">
+                </div>
+                <div class="featuredProductDesc">
+                  <p> Xiaomi Redmi 8 Original </p>
+                </div>
+                <div class="featuredProductPrice">
+                  <span>$32.00-$40.00</span>
+                </div>
+              </article>
+
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="/images/featuresImg3.png" alt="">
+                </div>
+                <div class="featuredProductDesc">
+                  <p> Xiaomi Redmi 8 Original </p>
+                </div>
+                <div class="featuredProductPrice">
+                  <span>$32.00-$40.00</span>
+                </div>
+              </article>
+
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="/images/featuresImg4.png" alt="">
+                </div>
+                <div class="featuredProductDesc">
+                  <p> Xiaomi Redmi 8 Original </p>
+                </div>
+                <div class="featuredProductPrice">
+                  <span>$32.00-$40.00</span>
+                </div>
+              </article>
+
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="/images/featuresImg4.png" alt="">
+                </div>
+                <div class="featuredProductDesc">
+                  <p> Xiaomi Redmi 8 Original </p>
+                </div>
+                <div class="featuredProductPrice">
+                  <span>$32.00-$40.00</span>
+                </div>
+              </article>
+
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="/images/featuresImg4.png" alt="">
+                </div>
+                <div class="featuredProductDesc">
+                  <p> Xiaomi Redmi 8 Original </p>
+                </div>
+                <div class="featuredProductPrice">
+                  <span>$32.00-$40.00</span>
+                </div>
+              </article>
+            </article>
+
+          </div>
+
+        </article>
+      </section>
+
+      <!-- Discount Banner Section-->
+
+      <section class="discountBannerBox">
+        <article class="discountBanner">
+          <div class="discountBannerLeft">
+            <div class="discountBannerText">
+              <h3> Super discount on more than 100 USD</h3>
+              <p>Have you ever finally just write dummy information</p>
+            </div>
+          </div>
+          <div class="discountBannerRight">
+            <div class="discountBannerBtn">
+              <a href="http://" target="_self">Shop Now</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <section class="footer">
+        <section class="footerMainBox">
+          <div class="companyImage">
+            <img src="/images/logo-colored.png" alt="Company Logo">
+          </div>
+
+          <div class="companyText">
+            <p>Best information about the company gies now lorem ipsum is</p>
+          </div>
+
+          <div class="companySocialLinks">
+            <ul class="social-links">
+              <li class="facebook">
+                <a href="https://www.facebook.com/">
+                  <img src="/images/youtuble logo_icon.svg" alt="facebook_icon">
+                </a>
+              </li>
+              <li class="twitter">
+                <a href="https://www.twitter.com/">
+                  <img src="/images/youtuble logo_icon.svg" alt="twitter_icon">
+                </a>
+              </li>
+              <li class="linkedin">
+                <a href="https://www.linkedin.com/" target="_blank">
+                  <img src="/images/youtuble logo_icon.svg" alt="linkedin_icon">
+                </a>
+              </li>
+              <li class="instagram">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img src="/images/youtuble logo_icon.svg" alt="instagram_icon">
+                </a>
+              </li>
+              <li class="youtube">
+                <a href="https://www.youtube.com/" target="_blank">
+                  <img src="/images/youtuble logo_icon.svg" alt="youtube_icon">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section class="footerAboutBox">
+          <h6>About</h6>
+          <ul>
+            <li>
+              <a href="">About Us</a>
+            </li>
+            <li>
+              <a href="">Find Stores</a>
+            </li>
+            <li>
+              <a href="">Categories</a>
+            </li>
+            <li>
+              <a href="">Blogs</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footerPartnershipBox">
+          <h6>Partnership</h6>
+          <ul>
+            <li>
+              <a href="">About Us</a>
+            </li>
+            <li>
+              <a href="">Find Stores</a>
+            </li>
+            <li>
+              <a href="">Categories</a>
+            </li>
+            <li>
+              <a href="">Blogs</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footerInfoBox">
+          <h6>Information</h6>
+          <ul>
+            <li>
+              <a href="">Help Center</a>
+            </li>
+            <li>
+              <a href="">Money Refund</a>
+            </li>
+            <li>
+              <a href="">Shipping</a>
+            </li>
+            <li>
+              <a href="">Contact Us</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footerUsersBox">
+          <h6>For Users</h6>
+          <ul>
+            <li>
+              <a href="">Login</a>
+            </li>
+            <li>
+              <a href="">Register</a>
+            </li>
+            <li>
+              <a href="">Settings</a>
+            </li>
+            <li>
+              <a href="">My Orders</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footerGetAppBox">
+          <h6>Get App</h6>
+          <div class="AppleStoreButton">
+            <img src="/images/market-button.png" alt="Download on the App Store">
+          </div>
+          <div class="googleStoreButton">
+            <img src="/images/market-button-1.png" alt="Get it on Google Play">
+          </div>
+        </section>
+      </section>
+
+      <section class="footerCopyrightBox">
+        <div class="footerCopyrightText">
+          <p>&copy; 2023 Ecommerce.</p>
+        </div>
+      </section>
+    </footer>
+
+
+  </div>
+
+
+  <script>
+    const tabs = document.querySelectorAll(".accordianBtn");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const targetId = tab.getAttribute("data-tab");
+
+        // Remove active from all buttons and contents
+        tabs.forEach((btn) => btn.classList.remove("active"));
+        contents.forEach((content) => content.classList.remove("active"));
+
+        // Add active to current
+        tab.classList.add("active");
+        document.getElementById(targetId).classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+
+</html>

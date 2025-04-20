@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="/css/cartPage.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <!-- header -->
+    <header>
+      <nav class="navigation-menu">
+        <div class="logo">
+          <a href="./home.html" aria-label="Homepage" target="_self" class="homepage-redirect-link">
+            <img src="./images/logo-colored.png" alt="Website Logo">
+          </a>
+        </div>
+
+        <!-- Icons Section (Profile, Messages, Cart) -->
+        <div class="icon-links">
+          <ul>
+            <li>
+              <a href="#" target="_self" class="icon-link" aria-label="Go to Profile">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+              </a> <!-- Profile Icon -->
+            </li>
+            <li>
+              <a href="#" target="_self" class="icon-link" aria-label="Go to Message">
+                <i class="fas fa-envelope"></i>
+                <span>Message</span>
+              </a> <!-- Messages Icon -->
+            </li>
+            <li>
+              <a href="#" target="_self" class="icon-link" aria-label="Go to Orders">
+                <i class="fa-solid fa-heart"></i>
+                <span>Orders</span>
+              </a> <!-- Wishlist Icon  -->
+            </li>
+            <li>
+              <a href="#" target="_self" class="icon-link" aria-label="Go to Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span>My cart</span>
+              </a> <!-- Cart Icon -->
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    
+    <main>
+      <!-- cart box -->
+      <section class="shoppingCartBox">
+        <div class="shoppingCartBoxHeading">
+          <h3>My Cart (3)</h3>
+        </div>
+        <article class="cartBoxes">
+          <article class="mainCartBox">
+            <article class="cartBoxLeft">
+              <article class="cartBox">
+                <div class="cartBoxImage">
+                  <img src="./images/Bitmap.png" alt="T-shirt with multiple colors, for men and women"">
+                </div>
+                <div class="cartBoxText">
+                  <h5>T-shirts with multiple colors, for men and lady</h5>
+                  <p>Size: medium, Color: blue, Material: Plastic
+                    Seller: Artel Market</p>
+                  <button aria-label="Remove item from cart">Remove</button>
+                  <button aria-label="Save item for later">Save For later</button>
+                </div>
+                <div class="cartBoxPrice">
+                  <span class="price">$78.99</span>
+                  <label for="qty-1">Qty:</label>
+                  <select name="qty" id="qty-1">
+                    <option value="1">Qty: 1</option>
+                  </select>
+                </div>
+              </article>
+              <article class="cartBox">
+                <div class="cartBoxImage">
+                  <img src="./images/Bitmap.png" alt="cart image">
+                </div>
+                <div class="cartBoxText">
+                  <h5>T-shirts with multiple colors, for men and lady</h5>
+                  <p>Size: medium, Color: blue, Material: Plastic
+                    Seller: Artel Market</p>
+                  <button>Remove</button>
+                  <button>Save For later</button>
+                </div>
+                <div class="cartBoxPrice">
+                  <span class="price">$78.99</span>
+                  <select name="" id="">
+                    <option value="">Qty: 1</option>
+                  </select>
+                </div>
+              </article>
+              <article class="cartBox">
+                <div class="cartBoxImage">
+                  <img src="./images/Bitmap.png" alt="cart image">
+                </div>
+                <div class="cartBoxText">
+                  <h5>T-shirts with multiple colors, for men and lady</h5>
+                  <p>Size: medium, Color: blue, Material: Plastic
+                    Seller: Artel Market</p>
+                  <button>Remove</button>
+                  <button>Save For later</button>
+                </div>
+                <div class="cartBoxPrice">
+                  <span class="price">$78.99</span>
+                  <select name="" id="">
+                    <option value="">Qty: 1</option>
+                  </select>
+                </div>
+              </article>
+            </article>
+            <article class="cartBoxRight">
+              <article class="cartBoxCoupon">
+                <h4>Have a coupon?</h4>
+                <label for="coupon-code">Add coupon</label>
+                <input type="text" id="coupon-code" name="coupon-code">
+                <button type="submit">Apply</button>
+              </article>
+              <article class="cartBoxTotal">
+
+              </article>
+            </article>
+          </article>
+        </article>
+      </section>
+
+      <!-- Services Section -->
+
+      <section class="servicesBox">
+        <div class="serviceGrid">
+          <article class="serviceOne service">
+            <div class="serviceIcon">
+              <span>
+                <i class="fa-solid fa-lock"></i>
+              </span>
+            </div>
+            <div class="serviceText">
+              <h4>Secure payment</h4>
+              <span>Have you ever finally just </span>
+            </div>
+          </article>
+          <article class="serviceTwo service">
+            <div class="serviceIcon">
+              <span>
+                <i class="fa-solid fa-message"></i>
+              </span>
+            </div>
+            <div class="serviceText">
+              <h4>Customer support</h4>
+              <span>Have you ever finally just </span>
+            </div>
+          </article>
+          <article class="serviceThree service">
+            <div class="serviceIcon">
+              <span>
+                <i class="fa-solid fa-truck"></i>
+              </span>
+            </div>
+            <div class="serviceText">
+              <h4>Free delivery</h4>
+              <span>Have you ever finally just </span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Featured Products Section -->
+
+      <section class="featuredBox">
+
+        <article class="featuredProductsBox">
+
+          <div class="featuredProducts">
+            <div class="featuredProductsBoxHeading">
+              <h3>Saved For Later</h3>
+            </div>
+
+            <article class="featuredProductBox">
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="./images/featuresImg1.png" alt="">
+                </div>
+                <div class="featuredProductPrice">
+                  <h5>$99.50</h5>
+                </div>
+                <div class="featuredProductDesc">
+                  <p>GoPro HERO6 4K Action Camera - Black</p>
+                </div>
+                <div class="featuredProductBtn">
+                  <span><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></span>
+                  <button type="button">Move to cart</button>
+                </div>
+              </article>
+
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="./images/featuresImg2.png" alt="">
+                </div>
+                <div class="featuredProductPrice">
+                  <h5>$99.50</h5>
+                </div>
+                <div class="featuredProductDesc">
+                  <p>GoPro HERO6 4K Action Camera - Black</p>
+                </div>
+                <div class="featuredProductBtn">
+                  <span><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></span>
+                  <button type="button">Move to cart</button>
+                </div>
+              </article>
+
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="./images/featuresImg3.png" alt="">
+                </div>
+                <div class="featuredProductPrice">
+                  <h5>$99.50</h5>
+                </div>
+                <div class="featuredProductDesc">
+                  <p>GoPro HERO6 4K Action Camera - Black</p>
+                </div>
+                <div class="featuredProductBtn">
+                  <span><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></span>
+                  <button type="button">Move to cart</button>
+                </div>
+              </article>
+
+              <article class="featuredProduct">
+                <div class="featuredProductImage">
+                  <img src="./images/featuresImg4.png" alt="">
+                </div>
+                <div class="featuredProductPrice">
+                  <h5>$99.50</h5>
+                </div>
+                <div class="featuredProductDesc">
+                  <p>GoPro HERO6 4K Action Camera - Black</p>
+                </div>
+                <div class="featuredProductBtn">
+                  <span><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></span>
+                  <button type="button">Move to cart</button>
+                </div>
+
+              </article>
+            </article>
+
+          </div>
+
+        </article>
+      </section>
+
+      <!-- Discount Banner Section-->
+
+      <section class="discountBannerBox">
+        <article class="discountBanner">
+          <div class="discountBannerLeft">
+            <div class="discountBannerText">
+              <h3> Super discount on more than 100 USD</h3>
+              <p>Have you ever finally just write dummy information</p>
+            </div>
+          </div>
+          <div class="discountBannerRight">
+            <div class="discountBannerBtn">
+              <a href="http://" target="_self">Shop Now</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <section class="footer">
+        <section class="footerMainBox">
+          <div class="companyImage">
+            <img src="./images/logo-colored.png" alt="Company Logo">
+          </div>
+
+          <div class="companyText">
+            <p>Best information about the company gies now lorem ipsum is</p>
+          </div>
+
+          <div class="companySocialLinks">
+            <ul class="social-links">
+              <li class="facebook">
+                <a href="https://www.facebook.com/">
+                  <img src="./images/youtuble logo_icon.svg" alt="facebook_icon">
+                </a>
+              </li>
+              <li class="twitter">
+                <a href="https://www.twitter.com/">
+                  <img src="./images/youtuble logo_icon.svg" alt="twitter_icon">
+                </a>
+              </li>
+              <li class="linkedin">
+                <a href="https://www.linkedin.com/" target="_blank">
+                  <img src="./images/youtuble logo_icon.svg" alt="linkedin_icon">
+                </a>
+              </li>
+              <li class="instagram">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img src="./images/youtuble logo_icon.svg" alt="instagram_icon">
+                </a>
+              </li>
+              <li class="youtube">
+                <a href="https://www.youtube.com/" target="_blank">
+                  <img src="./images/youtuble logo_icon.svg" alt="youtube_icon">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section class="footerAboutBox">
+          <h6>About</h6>
+          <ul>
+            <li>
+              <a href="">About Us</a>
+            </li>
+            <li>
+              <a href="">Find Stores</a>
+            </li>
+            <li>
+              <a href="">Categories</a>
+            </li>
+            <li>
+              <a href="">Blogs</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footerPartnershipBox">
+          <h6>Partnership</h6>
+          <ul>
+            <li>
+              <a href="">About Us</a>
+            </li>
+            <li>
+              <a href="">Find Stores</a>
+            </li>
+            <li>
+              <a href="">Categories</a>
+            </li>
+            <li>
+              <a href="">Blogs</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footerInfoBox">
+          <h6>Information</h6>
+          <ul>
+            <li>
+              <a href="">Help Center</a>
+            </li>
+            <li>
+              <a href="">Money Refund</a>
+            </li>
+            <li>
+              <a href="">Shipping</a>
+            </li>
+            <li>
+              <a href="">Contact Us</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footerUsersBox">
+          <h6>For Users</h6>
+          <ul>
+            <li>
+              <a href="">Login</a>
+            </li>
+            <li>
+              <a href="">Register</a>
+            </li>
+            <li>
+              <a href="">Settings</a>
+            </li>
+            <li>
+              <a href="">My Orders</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footerGetAppBox">
+          <h6>Get App</h6>
+          <div class="AppleStoreButton">
+            <img src="./images/market-button.png" alt="Download on the App Store">
+          </div>
+          <div class="googleStoreButton">
+            <img src="./images/market-button-1.png" alt="Get it on Google Play">
+          </div>
+        </section>
+      </section>
+
+      <section class="footerCopyrightBox">
+        <div class="footerCopyrightText">
+          <p>&copy; 2023 Ecommerce.</p>
+        </div>
+      </section>
+    </footer>
+
+
+  </div>
+
+</body>
+
+</html>
